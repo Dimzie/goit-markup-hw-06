@@ -57,6 +57,9 @@ ul {
     margin: 0;
     padding: 0;
 }
+textarea {
+    resize: none;
+}
 .container {
     width: 1158px;
 
@@ -297,10 +300,76 @@ ul {
     height: 576px;
     border-radius: 4px;
 
+    padding: 72px 24px 24px 24px;
+
     background-color: var(--modal-Background);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.modal-title {
+    font-size: 16px;
+    text-align: center;
+
+    margin-bottom: 16px;
+}
+.modal-name {
+    display: block;
+
+    font-size: 12px;
+    line-height: 14px;
+    
+    margin-bottom: 4px;
+
+    color: var(--borderCustomersIcon);
+}
+
+.modal-input {
+    width: 360px;
+    height: 40px;
+
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 38px;
+    margin-bottom: 8px;
+
+    outline: none;
+
+    border-radius: 4px;
+    border: 1px solid var(--borderCustomersIcon);
+
+    color: var(--nav-adress-p);
+
+    transition: border-color var(--time-function) var(--type-function);
+}
+.modal-input.comment {
+    height: 120px;
+
+    margin-bottom: 16px;
+    padding-left: 16px;
+}
+.modal-checkbox {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 2px;
+    border: 1px solid var(--h2-h3-background);
+}
+.checkbox-name {
+    display: flex;
+    font-size: 12px;
+    line-height: 14px;
+
+    margin-bottom: 16px;
+    gap: 8px;
+
+    justify-content: flex-start;
+    align-items: center;
+        
+    color: var(--borderCustomersIcon);
+}
+.modal-input:focus-within {
+    border-color: var(--span-activeButton);
 }
 .modal-button-close {
     position: absolute;
@@ -309,7 +378,9 @@ ul {
     transform: translate(-24px, 24px);
     border-radius: 50%;
 
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     width: 24px;
     height: 24px;
@@ -339,6 +410,16 @@ ul {
 }
 .modal-button-close:focus .close-button-icon {
     fill: var(--h1-textButton-background);
+}
+.modal-button {
+    display: block;
+    margin: 0 auto;
+}
+.privacy-policy {
+    color: var(--span-activeButton);
+}
+.comment::placeholder {
+    color: rgba(46, 47, 66, 0.4);
 }
 /* //////////////// */
 /* Features Section */
@@ -505,6 +586,7 @@ ul {
     gap: 24px;
 }
 .portfolio-button {
+    height: 48px;
     padding: 12px 24px;
 
     border: 1px solid var(--nonActiveButtonsBackground);
@@ -536,9 +618,7 @@ ul {
 
     transition: box-shadow var(--time-function) var(--type-function);
 }
-.portfolio-card:hover .hidden-text-overlay {
-    transform: translateY(0);
-}
+.portfolio-card:hover .hidden-text-overlay, 
 .portfolio-card:focus .hidden-text-overlay {
     transform: translateY(0);
 }
@@ -610,8 +690,6 @@ ul {
 }
 .footer-list {
     display: flex;
-
-    gap: 120px;
 }
 .bottom-logo {
     display: block;
@@ -620,11 +698,12 @@ ul {
 }
 .footer-content {
      width: 264px;
+     margin-right: 120px;
 }
 .studio-color, .footer-text {
     color: var(--background-studioWord-text);
 }
-.social-media {
+.footer-title {
     font-weight: 500;
 
     margin-bottom: 16px;
@@ -633,6 +712,9 @@ ul {
     display: flex;
 
     gap: 16px;
+}
+.footer-social-container{
+    margin-right: 80px;
 }
 .footer-icon {
     width: 24px;
@@ -649,4 +731,61 @@ ul {
 .footer-link:focus {
     background-color: var(--footerActiveBackgroungColor);
     opacity: 1;
+}
+.footer-button {
+    position: relative;
+    height: 40px;
+
+    padding: 8px 64px 8px 24px;
+
+    border-radius: 4px;
+    border: none;
+        
+    color: var(--h1-textButton-background);
+    background-color: var(--span-activeButton);
+
+    transition: background-color var(--time-function) var(--type-function);
+}
+.footer-button:focus,
+.footer-button:hover {
+    color: var(--h1-textButton-background);
+    background-color: var(--activeButtonPortfolio);
+}
+.footer-input {
+    height: 40px;
+    width: 264px;
+
+    font-size: 12px;
+
+    margin-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+
+    outline: none;
+
+    border-radius: 4px;
+    border: 1px solid var(--h1-textButton-background);
+
+    color: var(--h1-textButton-background);
+    background-color: transparent;
+
+    transition: border-color var(--time-function) var(--type-function);
+}
+.footer-input:focus-within {
+    border-color: var(--span-activeButton);
+}
+.footer-input::placeholder {
+    color: var(--h1-textButton-background);
+}
+.button-footer-icon {
+    position: absolute;
+
+    margin-left: 16px;
+
+    fill: var(--h1-textButton-background);
+}
+.footer-label {
+    display: block;
+    margin-bottom: 16px;
 }
