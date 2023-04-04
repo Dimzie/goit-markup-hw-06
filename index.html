@@ -456,6 +456,7 @@
         </div>
       </div>
     </footer>
+    <!-- Modal Section -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-button-close" data-modal-close>
@@ -468,16 +469,36 @@
         </h3>
         <form class="modal-form">
           <label for="modal-name" class="modal-name">Name</label>
-          <input type="text" name="name" id="modal-name" class="modal-input" />
-          <label for="modal-phone" class="modal-name">Phone</label>
-          <input type="tel" name="tel" id="modal-phone" class="modal-input" />
+          <div class="modal-input-field">
+            <input
+              type="text"
+              name="name"
+              id="modal-name"
+              class="modal-input"
+            />
+            <svg class="modal-icon person">
+              <use href="./images/icons.svg#person"></use>
+            </svg>
+          </div>
+          <label for="modal-phone" class="modal-name"> Phone</label>
+          <div class="modal-input-field">
+            <input type="tel" name="tel" id="modal-phone" class="modal-input" />
+            <svg class="modal-icon phone">
+              <use href="./images/icons.svg#phone"></use>
+            </svg>
+          </div>
           <label for="modal-email" class="modal-name">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="modal-email"
-            class="modal-input"
-          />
+          <div class="modal-input-field">
+            <input
+              type="email"
+              name="email"
+              id="modal-email"
+              class="modal-input"
+            />
+            <svg class="modal-icon email">
+              <use href="./images/icons.svg#email"></use>
+            </svg>
+          </div>
           <label for="modal-comment" class="modal-name">Comment</label>
           <textarea
             name="comment"
@@ -490,9 +511,12 @@
               type="checkbox"
               name="checkbox"
               id="modal-checkbox"
-              class="modal-checkbox"
+              class="modal-checkbox visually-hidden"
               required
             />
+            <svg class="checkbox-icon">
+              <use href="./images/icons.svg#confirm"></use>
+            </svg>
             <span
               >I accept the terms and conditions of the
               <a href="#" class="privacy-policy">Privacy Policy</a>
