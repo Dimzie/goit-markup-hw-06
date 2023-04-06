@@ -308,7 +308,6 @@ textarea {
     transform: translate(-50%, -50%);
 
     width: 408px;
-    height: 576px;
     border-radius: 4px;
 
     padding: 72px 24px 24px 24px;
@@ -327,7 +326,7 @@ textarea {
     margin-bottom: 16px;
 }
 .modal-name {
-    display: block;
+    display: inline-block;
 
     font-size: 12px;
     line-height: 14px;
@@ -338,6 +337,8 @@ textarea {
 }
 .modal-input-field {
     position: relative;
+
+    margin-bottom: 8px;
 }
 .modal-input {
     width: 360px;
@@ -346,7 +347,6 @@ textarea {
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 38px;
-    margin-bottom: 8px;
 
     outline: none;
 
@@ -457,6 +457,9 @@ textarea {
 }
 .modal-button {
     display: block;
+
+    min-width: 169px;
+
     margin: 0 auto;
 }
 .privacy-policy {
@@ -494,6 +497,7 @@ textarea {
 }
 .feature-list {
     display: flex;
+
     gap: 24px;
 }
 .feature-item {
